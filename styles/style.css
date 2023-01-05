@@ -1,262 +1,263 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-:root{
-  --main-color: #FD6E0A;
-  --bg-color: #FFF8F3;
+:root {
+  --main-color: #fd6e0a;
+  --bg-color: #fff8f3;
   --text-primary: #fff;
   --text-black-hard: #181818;
   --text-gray: #474747;
 }
 
-.header-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100vh;
+.header {
   background-color: var(--bg-color);
   background-image: url(../images/header_bg.png), url(../images/developer.png);
   background-repeat: no-repeat;
   background-position: right bottom, left;
 }
 
-.container{
-  padding: 50px 8%;
-}
-
-header{
+.navber {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding:  50px 8%;
 }
 
-header h2{
+.navber h2 {
   font-weight: 800;
   font-size: 45px;
 }
 
-header h2 span{
+.navber h2 span {
   color: var(--main-color);
 }
 
-.navber{
+.navber ul {
   display: flex;
   align-items: center;
+  gap: 50px;
 }
 
-.navber ul li{
-  list-style: none;
-  display: inline-block;
-}
-
-.navber ul li a{
-  color: var(--text-gray);
+.navber ul li {
   font-size: 20px;
+  list-style: none;
   font-weight: 500;
-  margin-right: 50px;
+}
+
+.navber ul li:nth-child(4) {
+  margin-right: 60px;
+}
+
+.navber ul li a {
+  color: var(--text-gray);
   text-decoration: none;
   position: relative;
 }
 
-.navber ul li a::after{
-  content: '';
+.navber ul li a::after {
+  content: "";
   width: 0;
   height: 3px;
+  background: var(--main-color);
   position: absolute;
   left: 0;
   bottom: -8px;
-  background-color: var(--main-color);  
   transition: 0.5s;
 }
 
-.navber ul li a:hover::after{
+.navber ul li a:hover::after {
   width: 100%;
 }
 
-
-.hire-btn{
-  padding: 18px 40px;
-  color: var(--text-primary);
-  background-color: var(--main-color);
-  border: 2px solid var(--main-color);
+.navber ul li button {
+  padding: 18px 36px;
+  background: var(--main-color);
   border-radius: 5px;
+  color: var(--text-primary);
   font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-weight: 500;
+  border: 2px solid var(--main-color);
+  transition: 0.5s;
   cursor: pointer;
 }
 
-/* !header banner style section */
-
-.header-banner{
-  display: flex;
-  justify-content: space-between;
-
+.navber ul li button:hover {
+  background: var(--text-primary);
+  color: var(--main-color);
 }
 
-.header-banner img{
-  margin-right: 50px;
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 8%;
 }
 
 .banner-contant{
   width: 585px;
   height: 356px;
 }
-
-.banner-contant h3{
+.banner-contant h3 {
   font-weight: 600;
   font-size: 45px;
+  margin-bottom: 30px;
   color: var(--text-gray);
-  margin: 0;
 }
 
-.banner-contant h1{
+.banner-contant h1 {
   font-weight: 700;
   font-size: 85px;
   color: var(--text-black-hard);
-  margin: 15px 0;
 }
-
-.banner-contant p{
-  font-size: 16px;
+.banner-contant p {
+  font-size: 18px;
   color: var(--text-gray);
-  margin-bottom: 50px;
+  margin: 25px 0 30px;
 }
 
-.banner-contant .download-cv-btn{
-  padding: 18px 50px;
-  background-color: var(--main-color);
+.download-cv-btn{
+  padding: 18px 25px;
+  background: var(--main-color);
   border-radius: 5px;
-  border: 2px solid var(--main-color);
   color: var(--text-primary);
-  font-weight: 700;
   font-size: 20px;
-  margin-right: 30px;
-  cursor: pointer;
-}
-
-.banner-contant .contact-btn{
-  padding: 18px 50px;
-  background-color: transparent;
-  border-radius: 5px;
+  font-weight: 500;
   border: 2px solid var(--main-color);
-  color: var(--main-color);
-  font-weight: 700;
-  font-size: 20px;
+  transition: 0.5s;
+  cursor: pointer;
   margin-right: 30px;
+}
+
+.contact-btn{  
+  padding: 18px 23px;
+  background: var(--text-primary);
+  border-radius: 5px;
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid var(--main-color);
+  transition: 0.5s;
   cursor: pointer;
 }
 
-.banner-contant button span{
-  margin-left: 10px;
+.contact-btn i{
+  margin-right: 15px;
 }
+
+
+
+
+
+
 
 
 
 /* !about section style start */
 
-#about{
+#about {
   margin: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 
-#about .container{  
+#about .container {
   background: var(--bg-color);
 }
 
-.about-content{
+.about-content {
   width: 1140px;
-  height: 550px ;
+  height: 550px;
   border-radius: 10px;
   padding: 130px 157px;
   text-align: center;
 }
 
-.about-content h3{
+.about-content h3 {
   font-weight: 700;
   font-size: 35px;
 }
 
-.about-content p{
+.about-content p {
   color: var(--text-gray);
   font-size: 18px;
   margin: 30px;
 }
 
-.developer-info{
+.developer-info {
   display: flex;
   gap: 30px;
   align-items: center;
   justify-content: center;
 }
 
-.developer-info p{
+.developer-info p {
   margin: 0;
 }
 
-.developer-info div p:nth-child(1){
+.developer-info div p:nth-child(1) {
   font-size: 18px;
   color: var(--text-gray);
 }
 
-.developer-info div p:nth-child(2){
+.developer-info div p:nth-child(2) {
   font-size: 20px;
   font-weight: 700;
   margin-top: 5px;
 }
 
-/* !about section finish */
+/* !skills section  */
 
-#my-skills{
+#my-skills {
   margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 
-#my-skills .container{
+#my-skills .container {
   padding: 50px 0;
 }
 
-.skills-content{
+.skills-content {
   display: flex;
   align-items: center;
   flex-direction: column;
   row-gap: 50px;
 }
 
-.inner-top-container{
+.inner-top-container {
   text-align: center;
   width: 909px;
 }
 
-.inner-top-container h3{
+.inner-top-container h3 {
   font-weight: 700;
-font-size: 35px;
-color: var(--text-black-hard);
+  font-size: 35px;
+  color: var(--text-black-hard);
 }
 
-.inner-top-container p{
+.inner-top-container p {
   color: var(--text-gray);
   font-size: 18px;
   margin-top: 30px;
 }
 
-
-.inner-down-container{
+.inner-down-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 24px;
   margin: 0;
 }
 
-.skill{
+.skill {
   height: 330px;
   color: var(--text-primary);
   box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
@@ -267,36 +268,42 @@ color: var(--text-black-hard);
   margin: 30px 0 40px 30px;
 }
 
-.skill div{
+.skill div {
   margin: 0 30px 0;
 }
 
-.skill h4{
+.skill h4 {
   color: var(--text-black-hard);
   font-size: 20px;
   font-weight: 700;
 }
 
-.skill p{
+.skill p {
   margin-top: 20px;
   color: var(--text-gray);
 }
 
-#resume-section{
+
+
+/* !my resume section start */
+.container{
+  padding: 50px 8%;
+}
+#resume-section {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.qualifications{
+.qualifications {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 70px;
 }
 
-.resume-container>h2{
+.resume-container > h2 {
   font-weight: 700;
   font-size: 35px;
   color: var(--text-black-hard);
@@ -304,47 +311,48 @@ color: var(--text-black-hard);
 }
 
 .education,
-.experience{
+.experience {
   margin-top: 30px;
   border-bottom: 2px solid var(--main-color);
 }
 
 .educations-container,
-.experences-container{
+.experences-container {
   text-align: left;
   margin-bottom: 50px;
 }
 
 .educations-container h3,
-.experences-container h3{
+.experences-container h3 {
   font-weight: 700;
-font-size: 30px;
-margin-right: 10px;
-color: var(--text-black-hard);
+  font-size: 30px;
+  margin-right: 10px;
+  color: var(--text-black-hard);
 }
 
 .educations-container h4,
-.experences-container h4{
+.experences-container h4 {
   font-weight: 700;
   font-size: 25px;
   margin-right: 10px;
-color: var(--text-black-hard);
+  color: var(--text-black-hard);
 }
 
 .educations-container h5,
-.experences-container h5{
+.experences-container h5 {
   font-weight: 600;
   font-size: 20px;
   margin: 20px 0 20px;
-color: var(--text-black-hard);
+  color: var(--text-black-hard);
 }
 .educations-container p,
-.experences-container p{
-color: var(--text-gray);
-padding-right: 10px;
+.experences-container p {
+  color: var(--text-gray);
+  padding-right: 10px;
+  margin-bottom: 30px;
 }
 
-.resume-container .download-cv-btn{
+.resume-container .download-cv-btn {
   padding: 18px 50px;
   background-color: var(--main-color);
   border-radius: 5px;
@@ -356,56 +364,56 @@ padding-right: 10px;
   cursor: pointer;
 }
 
-.download-cv-btn i{
+.download-cv-btn i {
   margin-right: 10px;
 }
 
-
 /* !contact section start */
 
-#contact-us{
+#contact-us {
   background: var(--bg-color);
+  width: 100%;
+  height: 100vh;
 }
 
-.contact-content{
+.contact-content {
   display: flex;
   justify-content: space-between;
   padding: 65px 0;
   gap: 115px;
 }
 
-.contact-left h3{
+.contact-left h3 {
   font-weight: 700;
-font-size: 35px;
-color: var(--text-black-hard);
+  font-size: 35px;
+  color: var(--text-black-hard);
 }
 
-.contact-left p{
+.contact-left p {
   color: var(--text-gray);
   margin: 20px 0 30px;
   max-width: 562px;
 }
 
-.contact-left ul li{
+.contact-left ul li {
   list-style: none;
   display: inline-block;
   margin: 0 15px;
   cursor: pointer;
 }
 
-.contact-left ul li img{
+.contact-left ul li img {
   width: 40px;
 }
 
-
-.contact-right h3{
+.contact-right h3 {
   font-weight: 700;
   font-size: 35px;
   color: var(--text-black-hard);
   margin-bottom: 28px;
 }
 
-.contact-right input{
+.contact-right input {
   width: 460px;
   height: 65px;
   border: none;
@@ -416,7 +424,7 @@ color: var(--text-black-hard);
   outline-color: var(--main-color);
 }
 
-.contact-right textarea{
+.contact-right textarea {
   resize: none;
   width: 460px;
   border: none;
@@ -428,17 +436,17 @@ color: var(--text-black-hard);
 }
 
 .contact-right input::placeholder,
-.contact-right textarea::placeholder{
+.contact-right textarea::placeholder {
   font-size: 20px;
   color: var(--main-color);
 }
 
 .contact-right input,
-.contact-right textarea{
+.contact-right textarea {
   margin-bottom: 25px;
 }
 
-form button{
+form button {
   padding: 18px 70px;
   color: var(--main-color);
   background: var(--text-primary);
@@ -448,6 +456,6 @@ form button{
   border-radius: 5px;
 }
 
-form *{
+form * {
   display: block;
 }
